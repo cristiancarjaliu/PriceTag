@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTag", "PriceTag.csproj", "{0CAB8D44-4728-45E5-9416-E53A90E42767}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CAB8D44-4728-45E5-9416-E53A90E42767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CAB8D44-4728-45E5-9416-E53A90E42767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CAB8D44-4728-45E5-9416-E53A90E42767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CAB8D44-4728-45E5-9416-E53A90E42767}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AA1DE88-1F47-473E-8F0B-70CC528F5515}
+	EndGlobalSection
+EndGlobal
