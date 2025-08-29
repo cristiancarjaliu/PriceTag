@@ -1,35 +1,31 @@
 # PriceTag
 
 Price Tag is a C# WinForms (.NET 8) application that generates price labels with product name, price, discounted price, producer name, and either a classic barcode or a QR code **(license required)**.  
-UI language: **Romanian** (labels such as "Foloseste pret cu discount", "Foloseste cod bare", "Foloseste nume producator").
+UI language: **Romanian**.
 
 ---
 
 ## Key features
-- **One-click Excel template** — Use **Model fisier** to generate an Excel with the required columns.
-- **Optional toggles** — "Foloseste pret cu discount", "Foloseste cod bare", and "Foloseste nume producator" are optional.  
-  **If all three are off, labels include only the product name and price.**
-- **Discount options** — *Card de fidelitate* or *Reducere promotionala* with a custom percentage. The label shows *Pret cu card de fidelitate* or *Pret promotional* accordingly.
-- **Producer name (optional)** — If missing, the app asks whether to continue; when accepted, the producer line is hidden for that product.
-- **Barcode or QR** — Choose between classic barcode or QR code per label.
+- **Excel template** — Built-in template generator creates an Excel file with the required columns.
+- **Optional toggles** — Discount price, barcode inclusion, and producer name can be turned on/off.  
+  **If all three are off, the label contains only the product name and price.**
+- **Discount options** — Loyalty-card or promotional discount with a custom percentage; labels reflect the chosen option.
+- **Producer name (optional)** — If missing, you can proceed and the producer line is hidden for that item.
+- **Barcode or QR** — Choose per label between classic barcode or QR code.
 - **PDF export** — Labels are exported directly to PDF.
 
 ## Licensing & enrollment
-- The license is validated against your **colectie/societate** in the backend.
-- First run requires enrollment:
-  1. Enter **Email** and **Parola**.
-  2. Click **Genereaza cod unic** — you receive a one-time code by email (valid for 24h).
-  3. Complete enrollment; a **GUID** tied to your company is generated and saved locally in `PriceTag.xml` (in the app root folder).
-- If the license is not valid, the app shows:  
-  **"Licenta actuala nu este valida! Contactati echipa de suport!"**
+The license is validated against your company/collection in the backend.  
+On first launch, you sign in, request a one-time code delivered by email (valid for 24 hours), then confirm enrollment. If the account has a valid license, a **GUID** tied to your company is issued and stored locally in `PriceTag.xml` (in the application root).  
+If the license is not valid, the app shows: **"Licenta actuala nu este valida! Contactati echipa de suport!"**
 
 ## Input & output
-- **Input**: Excel generated via **Model fisier** (contains all required headers).
-- **Output**: PDF file with the rendered labels.
+- **Input**: Excel created by the template generator (includes all required headers).
+- **Output**: PDF with the rendered labels.
 
 ## Barcode & QR details
-- **Barcode**: Code 39 (start/stop `*`, narrow/wide pattern). Rendered to bitmap, then embedded into PDF via `XImage`.
-- **QR code**: Generated with **QRCoder** (`ECCLevel.Q`). Payload is taken from input (e.g., SKU/text/URL).
+- **Barcode**: Code 39 (start/stop `*`, narrow/wide pattern). Rendered to bitmap and embedded in PDF.
+- **QR code**: Generated with **QRCoder** (`ECCLevel.Q`); payload comes from your input (e.g., SKU/text/URL).
 
 ## Requirements
 - Windows 10/11
@@ -39,12 +35,12 @@ UI language: **Romanian** (labels such as "Foloseste pret cu discount", "Foloses
 ## Install & run
 1. Download and extract the release.
 2. Run `PriceTag.exe`.
-3. Complete the enrollment flow on first launch.
+3. Complete enrollment on first launch.
 4. Configure label options (discount, barcode/QR, producer name).
-5. Use **Model fisier** to generate the Excel template, fill it in, then **Prelucrare fisier** to export PDF.
+5. Generate the Excel template, fill it in, then process it to export PDF labels.
 
 ## Updates
-- Manual distribution for now (no auto-update).
+- Manual distribution (no auto-update).
 
 ## Screenshots
 
@@ -67,4 +63,4 @@ UI language: **Romanian** (labels such as "Foloseste pret cu discount", "Foloses
 </p>
 
 ## Notes
-- `PriceTag.xml` (with the company GUID and basic settings) is saved in the **application root**.
+- `PriceTag.xml` (company GUID and basic settings) is saved in the **application root**.
