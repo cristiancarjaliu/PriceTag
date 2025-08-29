@@ -7,17 +7,14 @@ UI language: **Romanian**.
 
 ## Key features
 - **Excel template** — Built-in template generator creates an Excel file with the required columns.
-- **Optional toggles** — Discount price, barcode inclusion, and producer name can be turned on/off.  
+- **Optional toggles** — Enable/disable discount price, barcode (classic or QR), and producer name.  
+  If the producer name is missing you can proceed and that line is omitted for that item.  
   **If all three are off, the label contains only the product name and price.**
 - **Discount options** — Loyalty-card or promotional discount with a custom percentage; labels reflect the chosen option.
-- **Producer name (optional)** — If missing, you can proceed and the producer line is hidden for that item.
-- **Barcode or QR** — Choose per label between classic barcode or QR code.
 - **PDF export** — Labels are exported directly to PDF.
 
 ## Licensing & enrollment
-The license is validated against your company/collection in the backend.  
-On first launch, you sign in, request a one-time code delivered by email (valid for 24 hours), then confirm enrollment. If the account has a valid license, a **GUID** tied to your company is issued and stored locally in `PriceTag.xml` (in the application root).  
-If the license is not valid, the app shows: **"Licenta actuala nu este valida! Contactati echipa de suport!"**
+On first launch you sign in, request a one-time code delivered by email (valid for 24 hours), confirm it, and complete enrollment. The account’s license is verified during this process. If the license is valid, a company-scoped GUID is issued and stored locally in `PriceTag.xml` (in the application root). If the license is not valid, the app displays **"Licenta actuala nu este valida! Contactati echipa de suport!"** and stops.
 
 ## Input & output
 - **Input**: Excel created by the template generator (includes all required headers).
