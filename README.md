@@ -20,11 +20,7 @@ On first launch you sign in, request a one-time code delivered by email (valid f
 - **Input**: Excel created by the template generator (includes all required headers).
 - **Output**: PDF with the rendered labels.
 
-## Barcode & QR details
-- **Barcode**: Code 39 (start/stop `*`, narrow/wide pattern). Rendered to bitmap and embedded in PDF.
-- **QR code**: Generated with **QRCoder** (`ECCLevel.Q`); payload comes from your input (e.g., SKU/text/URL).
-
-## Requirements
+## Recommended requirements
 - Windows 10/11
 - .NET 8 Runtime
 - No external dependencies beyond those bundled with the app
@@ -35,9 +31,6 @@ On first launch you sign in, request a one-time code delivered by email (valid f
 3. Complete enrollment on first launch.
 4. Configure label options (discount, barcode/QR, producer name).
 5. Generate the Excel template, fill it in, then process it to export PDF labels.
-
-## Updates
-- Manual distribution (no auto-update).
 
 ## Screenshots
 
